@@ -166,8 +166,31 @@
 
     /* RESPONSIVE */
     @media (max-width: 860px) {
-      .hero-inner { grid-template-columns: 1fr; }
-      .hero-photo-frame { display: none; }
+      .hero-inner {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        text-align: center;
+      }
+      .hero-left { order: 2; }
+      .hero-photo-frame {
+        display: block;
+        order: 1;
+        margin: 0 auto 2rem;
+        width: 160px;
+      }
+      .hero-photo {
+        width: 160px;
+        height: 190px;
+        border-radius: 50%;
+        object-fit: cover;
+        object-position: top center;
+      }
+      .hero-photo-frame::after {
+        border-radius: 50%;
+      }
+      .hero-ctas { justify-content: center; }
+      .hero-stats { justify-content: center; }
+      .hero-bio { margin-left: auto; margin-right: auto; }
       .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
       .nav-links { display: none; }
     }
