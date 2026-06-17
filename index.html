@@ -167,27 +167,29 @@
     /* RESPONSIVE */
     @media (max-width: 860px) {
       .hero-inner {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         text-align: center;
+        gap: 1.5rem;
       }
-      .hero-left { order: 2; }
       .hero-photo-frame {
         display: block;
-        order: 1;
-        margin: 0 auto 2rem;
-        width: 160px;
+        width: 140px;
+        flex-shrink: 0;
       }
       .hero-photo {
-        width: 160px;
-        height: 190px;
+        width: 140px;
+        height: 140px;
         border-radius: 50%;
         object-fit: cover;
         object-position: top center;
       }
       .hero-photo-frame::after {
         border-radius: 50%;
+        inset: -6px;
       }
+      .hero-left { width: 100%; }
       .hero-ctas { justify-content: center; }
       .hero-stats { justify-content: center; }
       .hero-bio { margin-left: auto; margin-right: auto; }
