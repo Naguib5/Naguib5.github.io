@@ -178,20 +178,27 @@
       .hero-photo-frame {
         display: block;
         width: 140px;
+        height: 140px;
         flex-shrink: 0;
+        order: -1;
+        position: relative;
       }
       .hero-photo {
-        width: 140px;
-        height: 140px;
-        border-radius: 50%;
-        object-fit: cover;
+        width: 140px !important;
+        height: 140px !important;
+        min-width: 140px;
+        min-height: 140px;
+        border-radius: 50% !important;
+        object-fit: cover !important;
         object-position: top center;
+        display: block !important;
+        aspect-ratio: auto !important;
       }
       .hero-photo-frame::after {
         border-radius: 50%;
         inset: -6px;
       }
-      .hero-left { width: 100%; }
+      .hero-left { width: 100%; order: 1; }
       .hero-ctas { justify-content: center; }
       .hero-stats { justify-content: center; }
       .hero-bio { margin-left: auto; margin-right: auto; }
