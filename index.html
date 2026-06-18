@@ -155,10 +155,39 @@
     .contact-heading { font-family: "Syne", sans-serif; font-size: clamp(1.9rem, 4vw, 3rem); font-weight: 800; line-height: 1.15; margin-bottom: 1rem; }
     .contact-sub { color: var(--muted); max-width: 440px; margin: 0 auto 2.2rem; font-size: 0.94rem; }
     .contact-links { display: flex; justify-content: center; gap: 0.8rem; flex-wrap: wrap; }
-    .contact-info { display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; margin-top: 1.8rem; }
-    .contact-info-item { font-size: 0.81rem; color: var(--muted); display: flex; align-items: center; gap: 0.4rem; }
-    .contact-info-item a { color: var(--muted); text-decoration: none; transition: color 0.2s; }
+
+    .contact-info {
+      display: flex; justify-content: center; flex-wrap: wrap;
+      gap: 0.75rem; margin: 2.4rem auto 0; max-width: 760px;
+    }
+    .contact-info-item {
+      display: inline-flex; align-items: center; gap: 0.65rem;
+      padding: 0.7rem 1.1rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      font-size: 0.84rem; color: var(--text);
+      transition: border-color 0.25s, transform 0.25s, background 0.25s;
+    }
+    .contact-info-item:hover { border-color: var(--accent-dim); background: #1c1c1c; transform: translateY(-2px); }
+    .contact-icon {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 28px; height: 28px; border-radius: 50%;
+      background: rgba(200,146,42,0.12); color: var(--accent);
+      font-size: 0.95rem; flex-shrink: 0;
+    }
+    .contact-info-item a {
+      color: var(--text); text-decoration: none;
+      font-family: "Inter", sans-serif; font-weight: 500;
+      letter-spacing: 0.01em;
+      transition: color 0.2s;
+    }
     .contact-info-item a:hover { color: var(--accent); }
+    .contact-info-item .contact-label {
+      font-size: 0.66rem; color: var(--muted); text-transform: uppercase;
+      letter-spacing: 0.14em; margin-right: 0.15rem;
+      display: none;
+    }
 
     footer { position: relative; z-index: 1; text-align: center; padding: 1.6rem 6vw; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.74rem; letter-spacing: 0.04em; }
 
@@ -198,6 +227,9 @@
       .hero-bio { margin-left: auto; margin-right: auto; }
       .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
       .nav-links { display: none; }
+      .contact-info { flex-direction: column; align-items: stretch; gap: 0.6rem; padding: 0 0.5rem; }
+      .contact-info-item { justify-content: flex-start; width: 100%; font-size: 0.82rem; padding: 0.7rem 0.95rem; }
+      .contact-info-item a { word-break: break-all; }
     }
     @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; } }
   </style>
@@ -365,9 +397,18 @@
       <a href="https://github.com/Naguib5" target="_blank" class="btn btn-ghost">GitHub</a>
     </div>
     <div class="contact-info reveal">
-      <div class="contact-info-item">&#x1F4E7; <a href="mailto:naguibnaguib2018@gmail.com">naguibnaguib2018@gmail.com</a></div>
-      <div class="contact-info-item">&#x1F4F1; <a href="tel:+201211761023">+20 121 176 1023</a></div>
-      <div class="contact-info-item">&#x1F4CD; Cairo, Egypt</div>
+      <div class="contact-info-item">
+        <span class="contact-icon">&#x2709;</span>
+        <a href="mailto:naguibnaguib2018@gmail.com">naguibnaguib2018@gmail.com</a>
+      </div>
+      <div class="contact-info-item">
+        <span class="contact-icon">&#x260E;</span>
+        <a href="tel:+201211761023">+20 121 176 1023</a>
+      </div>
+      <div class="contact-info-item">
+        <span class="contact-icon">&#x25C6;</span>
+        <span>Cairo, Egypt</span>
+      </div>
     </div>
   </section>
 
