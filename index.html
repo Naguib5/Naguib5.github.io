@@ -222,7 +222,8 @@
         inset: -6px;
       }
       .hero-left { width: 100%; order: 2; }
-      .hero-ctas { justify-content: center; }
+      .hero-ctas { justify-content: center; flex-wrap: nowrap; gap: 0.5rem; }
+      .hero-ctas .btn { padding: 10px 16px; font-size: 0.78rem; flex: 1; text-align: center; min-width: 0; }
       .hero-stats { justify-content: center; }
       .hero-bio { margin-left: auto; margin-right: auto; }
       .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
@@ -263,7 +264,11 @@
           <span id="typewriter"></span><span class="cursor"></span>
         </div>
         <p class="hero-bio">
-          Analytical Data Analyst with a Computer Science background &mdash; turning raw, messy data into structured models and actionable business insights. Specializing in Power BI, SQL, and end-to-end ETL workflows.
+          Analytical Data Analyst with a Computer Science background &mdash;
+          turning raw, messy data into structured models and actionable business insights.
+          Specializing in <strong style="color:var(--text)">Power BI</strong>,
+          <strong style="color:var(--text)">SQL</strong>, and
+          <strong style="color:var(--text)">end-to-end ETL workflows</strong>.
         </p>
         <div class="hero-ctas">
           <a href="#projects" class="btn btn-primary">View My Work</a>
@@ -440,4 +445,3 @@
   </script>
 </body>
 </html>
-
